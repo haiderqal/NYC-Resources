@@ -2,27 +2,48 @@
 <html lang="en">
   <head>
     <title>HAli_AdvocacyProject</title>
-    <!-- the content here will only show in the tab and in the metadata about the page -->
-
-    <!--uncomment this block of code so that you can add at least two CSS declarations-->
-
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="reset.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <style>
+      /* Light Theme (default) */
+      body {
+        background-color: white;
+        color: black;
+      }
+
+      /* Dark Theme */
+      body.dark-theme {
+        background-color: black;
+        color: white;
+      }
+
+      /* Color-change button styling */
+      .color-change {
+        background-color: rgb(255, 217, 0);
+        color: rgb(0, 0, 0);
+        border-radius: 20px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        padding: 10px 20px;
+        cursor: pointer;
+        outline: black;
+      }
+
+      /* Optional hover effect for the button */
+      .color-change:hover {
+        opacity: 0.8;
+        background-color: rgb(28, 65, 145);
+        color: white;
+      }
+    </style>
   </head>
 
-  <body>
+  <body id="body">
     <h1>Home</h1>
-    <img
-      src="images/nyc.jpg"
-      alt="Description of the image"
-      width="700"
-      height="500"
-    />
-
-    <!-- Part 1: Navbar Starter Code -->
+    <img src="images/nyc.jpg" alt="Description of the image" class="nyc-img" />
 
     <div class="navbar">
       <ul>
@@ -30,16 +51,17 @@
         <li><a href="#">Employment</a></li>
         <li><a href="#">Environmental</a></li>
         <li><a href="#">Contact Us</a></li>
-        <!-- Stretch Challenge: Drop Down -->
       </ul>
     </div>
     <img
       src="images/little-island.jpg"
-      alt="This is an actual image that my 
-  friend took when we went to a pier called little island."
+      alt="This is an actual image that my friend took when we went to a pier called little island."
       width="400"
       height="300"
     />
+
+    <!-- Button to toggle the theme -->
+    <button class="color-change">Switch to Dark Theme</button>
 
     <form id="contactForm">
       <label for="name">Name:</label>
@@ -48,11 +70,9 @@
       <label for="email">Email:</label>
       <input type="text" id="email" name="email" /><br />
 
-      <button type="submit">Submit</button>
+      <button id="button2" type="submit">Submit</button>
     </form>
     <div id="errorMessages"></div>
-
-    <!-- Part 2: Flexbox Layout Starter Code -->
 
     <div class="header-container">
       <div class="header-item">New York City Resources</div>
@@ -65,57 +85,42 @@
       height="500"
     />
 
-    <!--- Headings --->
-
-    <img />
-    <!-- if you want to add an image, use this tag and link to the actual
-     image location in your project with the src attribute -->
     <h2>Welcome to HAli_AdvocacyProject!</h2>
     <div>I will be making a website for NYC Resources.</div>
     <h3>Short description about topic</h3>
     <button type="button">Disabled page button</button>
     <button style="background-color: blue">another disabled button!</button>
     <a class="active" href="https://example.com">Click here</a>
-    <!--- About --->
+
     <h2>About My Topic</h2>
     <p>What is the problem my topic covers? Why is it a problem?</p>
 
-    <!--- Data --->
-
     <h3>Data about my topic</h3>
-
     <img src="" />
 
-    <!--- Impact --->
     <h2>Impact!</h2>
     <div class="header-left"></div>
-
     <div class="header-right"></div>
     <img src="" />
     <h3>Where can this problem have lasting effects?</h3>
     <p>Why?</p>
+    <script>
+      // Select the button and the body element
+      const themeToggleButton = document.querySelector(".color-change");
+      const body = document.body;
 
-    <img src="" />
-    <h3>Where else can this problem have lasting effects?</h3>
-    <p>Why?</p>
+      // Add event listener to toggle theme
+      themeToggleButton.addEventListener("click", () => {
+        // Toggle the dark-theme class on the body
+        body.classList.toggle("dark-theme");
 
-    <img src="" />
-    <h3>Where else else can this problem have lasting effects?</h3>
-    <p>Why?</p>
-
-    <!--- News --->
-    <!--this will help with a stretch goal, if you do not want to 
-    incorporate this, then leave it alone 
-    <h2>Recent News</h2>
-
-    <a class=""
-        href="">
-        <article>
-            <h3></h3>
-            <p></p>
-        </article>
-    </a>
-:)-->
+        // Update the button text
+        if (body.classList.contains("dark-theme")) {
+          themeToggleButton.textContent = "Switch to Light Theme";
+        } else {
+          themeToggleButton.textContent = "Switch to Dark Theme";
+        }
+      });
+    </script>
   </body>
-  <script type="text/javascript" src="script.js"></script>
 </html>

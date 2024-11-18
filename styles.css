@@ -1,140 +1,109 @@
-/* Add CSS styles for your web site here and use them in index.html. */
-/* Part 1: Navbar */
-
-/* General style rule set for all items in ul */
+/* General styles */
 body {
-    color: white;
-    background-color: #3f3b41;
+  color: white;
+  background-color: #3f3b41;
 }
 
 h1 {
-    background-color: #778ac7;
+  background-color: #778ac7;
 }
 
 p {
-    background-color: rgb(111, 150, 168);
+  background-color: rgb(111, 150, 168);
 }
 
 .important {
-    background-color: black;
-} /* this will require you to declare a class="important" in one of your HTML elements */
+  background-color: black;
+}
 
 #interesting {
-    background-color: beige;
-} /* this will require you to declare a id="interesting" in one of your HTML elements */
+  background-color: beige;
+}
 
-
+/* Navbar styles */
 .navbar ul {
-    color: rgb(125, 19, 139);
-    list-style-type: none;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    margin-bottom: 20px;
-    background-color: #37527c;
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-around; /* Space out items evenly */
+  color: rgb(125, 19, 139);
+  list-style-type: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #37527c;
+  display: flex;
+  justify-content: space-around;
 }
 
 .navbar ul li {
-    margin: 10px; /* Remove float and keep margin for spacing */
+  margin: 10px;
 }
 
 .navbar ul li a {
-    display: block;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 12px 20px;
+  display: block;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 12px 20px;
 }
 
 .navbar ul li a:hover {
-    background-color: #000000;
-    color: yellow;
+  background-color: #000000;
+  color: yellow;
 }
 
-
-
-/* Part 2: Flexbox */
-
-/* General style rule set for flex container */
+/* Flexbox layout */
 .content-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 .content-item {
-    width: 45%; /* Adjust width as needed */
-    padding: 20px;
-    background-color: #f5f5f5;
-}
-
-
-.flex-item {
-    background: rgb(255, 255, 255);
-    color: black;
-    font-weight: bold;
-    text-align: center;
-    padding: 20px;
-    border: 1px solid #000000;
-    width: 100px; /* Added width for uniform size */
+  width: 45%;
+  padding: 20px;
+  background-color: #f5f5f5;
 }
 
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: rgb(211, 211, 211);
-}
-
-.header-item:nth-of-type(1) {
-    width: 50%; /* Style for the first item */
-    background-color: rgb(255, 187, 0);
-}
-
-.header-item:nth-of-type(2) {
-    width: 50%; /* Style for the second item */
-    background-color: rgb(255, 251, 0);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: rgb(211, 211, 211);
 }
 
 .header-item {
-    padding: 20px;
-    text-align: center;
-    border: 1px solid #000;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #000;
 }
 
-
-
-/* Style rules for flex-item 1 */
-.flex-item:nth-of-type(1) {
-
+.header-item:nth-of-type(1) {
+  width: 50%;
+  background-color: rgb(255, 187, 0);
 }
 
-/* Style rules for flex-item 2 */
-.flex-item:nth-of-type(2) {
-
+.nyc-img {
+    width: 100%;
+    height: auto;
+    opacity: 0.2;
 }
 
-/* Style rules for flex-item 3 */
-.flex-item:nth-of-type(3) {
-
+.header-item:nth-of-type(2) {
+  width: 50%;
+  background-color: rgb(255, 251, 0);
 }
-*/
 
-/* Style set for all flex-items */
 .flex-item {
-    background: rgb(255, 255, 255);
-    color: black;
-    font-weight: bold;
-    text-align: center;
-    padding: 20px;
-    border: 1px solid #000;
+  background: rgb(255, 255, 255);
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #000;
 }
 
-/* CSS for invalid inputs */
+/* Error styling for invalid inputs */
 .error {
-    border: 2px solid red;
-    background-color: pink;
+  border: 2px solid red;
+  background-color: pink;
 }

@@ -25,3 +25,19 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     document.getElementById("errorMessages").innerHTML = errors.join("<br>");
   });
   
+
+  const themeToggleButton = document.getElementById('color-change');
+  const body = document.body;
+
+  // Add event listener to the button
+  themeToggleButton.addEventListener('click', () => {
+    // Toggle the dark-theme class on the body
+    body.classList.toggle('dark-theme');
+
+    // Change button text to indicate the current theme
+    if (body.classList.contains('dark-theme')) {
+      themeToggleButton.textContent = 'Switch to Light Theme';
+    } else {
+      themeToggleButton.textContent = 'Switch to Dark Theme';
+    }
+  });
